@@ -1,0 +1,33 @@
+{% extends 'generator/base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+
+      <H1 class = "alert alert-dark"> Your BMI is: </H1>
+
+
+    <h2> {{bmi}} </h2>
+    <br>
+    <a href = '{% url 'home' %}' class = 'btn btn-dark'> Home</a>
+    <br>
+    <hr>
+    <h1 class = "alert alert-dark"><b>BMI Categories:</b></h1>
+    Underweight = <18.5
+    <br>
+    Normal weight = 18.5–24.9
+    <br>
+    Overweight = 25–29.9
+    <br>
+    Obesity = BMI of 30 or greater
+    <br>
+    <br>
+    <hr>
+  </div>
+</div>
+
+
+<p>Body mass index (BMI) is a person’s weight in kilograms divided by the square of height in meters. BMI is an inexpensive and easy screening method for weight category—underweight, healthy weight, overweight, and obesity.</p>
+<p>BMI does not measure body fat directly, but BMI is moderately correlated with more direct measures of body fat. Furthermore, BMI appears to be as strongly correlated with various metabolic and disease outcome as are these more direct measures of body fatness</p>
+{% endblock %}

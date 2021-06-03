@@ -1,0 +1,45 @@
+{% extends 'generator/base.html' %}
+
+{% block content %}
+
+<p style="text-align:center;"><b>Results </b> </p>
+<p style="text-align:center;"> This section will keep track of your <b>History</b> </p>
+<hr>
+
+
+<div>
+    <table border="1" class="table table-striped table-dark"  >
+        <thead>
+            <th > Date </th>
+            <th>BMR</th>
+            {% for result in results %}
+        </thead>
+        <tr>
+            <td class="table-secondary text-dark">{{result.date}}</td>
+            <td class="table-secondary text-dark">{{result.output}}</td>
+        <tr>
+        {% endfor %}
+</table>
+</div>
+<br>
+<hr>
+<br>
+
+<div>
+    <table border="1" class="table table-striped table-dark" >
+        <thead>
+            <th> Date </th>
+            <th>BMI</th>
+        </thead>
+        {% for result2 in results2 %}
+        <tr>
+            <td class="table-secondary text-dark">{{result2.date}}</td>
+            <td class="table-secondary text-dark">{{result2.output}}</td>
+        <tr>
+        {% endfor %}
+    </table>
+    </div>
+
+
+
+{% endblock %}

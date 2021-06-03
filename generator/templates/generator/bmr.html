@@ -1,0 +1,30 @@
+{% extends 'generator/base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+
+      <H1 class = "alert alert-dark"> Your BMR is: </H1>
+
+
+    <h2> {{bmr}} </h2>
+    <br>
+    <br>
+    <a href = '{% url 'home' %}' class = 'btn btn-dark'> Home</a>
+    <hr>
+    <h1 class = "alert alert-dark"> <b> Why you might want to know your BMR </b></h1> 
+  </div>
+</div>
+
+
+<br>
+<h3> Your BMR can be used to help you gain, lose, or maintain your weight. By knowing how many calories you burn, you can know how many to consume. To put it simply:</h3>
+<br>
+<em>
+<p>Is your goal to maintain your weight? Consume the same number of calories that you burn.</p>
+<p>your goal to gain weight? Consume more calories than you burn.</p>
+<p>Is your goal to lose weight? Consume fewer calories than you burn.</p>
+</em>
+
+{% endblock %}

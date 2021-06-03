@@ -1,0 +1,29 @@
+{% extends 'generator/base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+
+    <h2 class="alert alert-dark">BMI calculator</h2>
+
+    <form method = 'post' >
+      {% csrf_token %}
+      <br>
+      <br>
+      <input type = "number" name = "weight" required min="30" max="200">  Weight (in kgs)
+      <br>
+      <br>
+      <input type = "number" name = "height" required min="50" max="280">  height(in cm)
+      <br>
+      <br>
+      <input type = "submit" value = "Generate BMI" class = "btn btn-dark" >
+      <hr>
+
+      </form>
+  </div>
+</div>
+
+<b>Body mass index</b> is a value derived from the mass and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m², resulting from mass in kilograms and height in metres.
+
+{% endblock %}
